@@ -28,7 +28,9 @@ public class HighCpu {
       return fibonacci(n - 1) + fibonacci(n - 2);
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args)throws Exception {
+    System.out.println("Hit Return / Enter to continue ");
+    System.in.read();
     Thread t1 = new Thread(() -> {
       String tName = Thread.currentThread().getName();
       for (int i = 1; i < 100; i++) {
